@@ -480,7 +480,14 @@
           top: parseInt(v.top)
         }
       },
+        getMaxHeight() {
+            let v = this.scroller.getScrollMax()
 
+            return {
+                left: parseInt(v.left),
+                top: parseInt(v.top)
+            }
+        },
       resetLoadingState() {
         let {left, top, zoom} = this.scroller.getValues()
         let container = this.container;
